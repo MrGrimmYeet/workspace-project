@@ -1,3 +1,4 @@
+// Funktion zum Umschalten zwischen den Tabs
 function switchTab(tab) {
     // Alle Tabs ausblenden
     let tabs = document.querySelectorAll('.tab-content');
@@ -13,3 +14,9 @@ function switchTab(tab) {
     // Den entsprechenden Button aktivieren
     document.querySelector(`.tab-btn[onclick="switchTab('${tab}')"]`).classList.add('active');
 }
+
+// Sicherstellen, dass die Funktion sofort beim Laden aktiv ist
+document.addEventListener("DOMContentLoaded", () => {
+    // Setze den ersten Tab als aktiven Tab
+    switchTab("dashboard"); // Oder wähle den gewünschten Standard-Tab
+});
