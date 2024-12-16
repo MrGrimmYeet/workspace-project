@@ -4,23 +4,22 @@
   <meta charset="UTF-8">
   <title>Workspace Dashboard</title>
   <link rel="stylesheet" href="./styles/style.css">
-  <link rel="stylesheet" href="./styles/dashboard.css">
 </head>
 <body>
-  <div class="container">
-    <div class="sidebar">
-      <h2>Dashboard</h2>
-      <ul>
-        <li onclick="navigate('../pages/emails.html')">E-Mails</li>
-        <li onclick="navigate('../pages/todos.html')">To-Do's</li>
-        <li onclick="navigate('../pages/money.html')">Money Manager</li>
-        <li onclick="navigate('../pages/calendar.html')">Calendar</li>
-      </ul>
-    </div>
-    <div class="main-content">
-      <h1>Welcome, User!</h1>
-    </div>
+  <div class="sidebar">
+    <h2>Workspace</h2>
+    <ul>
+      <li onclick="loadPage('emails')">E-Mails</li>
+      <li onclick="loadPage('todos')">To-Do's</li>
+      <li onclick="loadPage('money')">Money Manager</li>
+      <li onclick="loadPage('calendar')">Kalender</li>
+    </ul>
   </div>
-  <script src="./renderer/dashboard.js"></script>
+  <div class="main-content" id="content">
+    <h1>Willkommen im Workspace</h1>
+    <p>Wähle einen Bereich aus der Sidebar.</p>
+  </div>
+
+  <script src="renderer.js"></script>
 </body>
 </html>
