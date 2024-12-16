@@ -1,31 +1,22 @@
-const path = require("path");
+const path = require('path');
 
 module.exports = {
-  mode: "development",
-  entry: "./src/renderer/index.js",
+  entry: './src/main.js',
+  target: 'electron-main',
   output: {
-    path: path.resolve(__dirname, "dist"),
-    filename: "bundle.js",
+    path: path.resolve(__dirname, 'dist'),
+    filename: 'main.js',
   },
   module: {
     rules: [
       {
-        test: /\.jsx?$/,
+        test: /\.js$/,
         exclude: /node_modules/,
-        use: {
-          loader: "babel-loader",
-        },
-      },
-      {
-        test: /\.css$/,
-        use: ["style-loader", "css-loader"],
+        use: 'babel-loader',
       },
     ],
   },
   resolve: {
-    extensions: [".js", ".jsx"],
-  },
-  devServer: {
-    static: "./dist",
+    extensions: ['.js'],
   },
 };
