@@ -1,71 +1,107 @@
+/* Grundlegendes Layout */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: Arial, sans-serif;
-  }
-  
-  body {
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f9;
+    color: #333;
     display: flex;
     height: 100vh;
-    background-color: #f5f6f7;
-  }
-  
-  #sidebar {
-    width: 250px;
-    background-color: #ffffff;
-    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
-    padding: 1em;
-  }
-  
-  #sidebar h2 {
-    font-size: 1.5em;
-    margin-bottom: 1.5em;
-    text-align: center;
-    color: #333;
-  }
-  
-  .sidebar-item {
-    padding: 0.8em;
-    margin: 0.5em 0;
-    cursor: pointer;
-    color: #555;
-    border-radius: 5px;
-  }
-  
-  .sidebar-item.active,
-  .sidebar-item:hover {
-    background-color: #4a90e2;
+}
+
+/* Sidebar-Styling */
+#sidebar {
+    background-color: #2c2c2c;
     color: white;
-  }
-  
-  #content {
-    flex-grow: 1;
+    width: 250px;
     display: flex;
     flex-direction: column;
-    padding: 1em;
-  }
-  
-  #header {
+    padding: 20px;
+    height: 100vh;
+}
+
+#logo img {
+    width: 100%;
+    height: auto;
+}
+
+#tabs {
+    margin-top: 40px;
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 1em;
-    color: #333;
-  }
-  
-  .section {
+    flex-direction: column;
+}
+
+.tab-btn {
+    background-color: transparent;
+    border: none;
+    padding: 15px;
+    text-align: left;
+    font-size: 18px;
+    color: #ddd;
+    margin-bottom: 10px;
+    cursor: pointer;
+    transition: 0.3s;
+    border-radius: 5px;
+}
+
+.tab-btn:hover {
+    background-color: #444;
+}
+
+.tab-btn.active {
+    background-color: #555;
+}
+
+#main-content {
+    flex-grow: 1;
+    padding: 20px;
+    overflow-y: auto;
     background-color: white;
+    border-radius: 10px;
+    margin-left: 10px;
+}
+
+#header h1 {
+    font-size: 32px;
+    font-weight: bold;
+    color: #333;
+}
+
+/* Tab-Inhalte */
+.tab-content {
+    display: none;
+}
+
+.tab-content.active {
+    display: block;
+}
+
+#email-editor {
+    background-color: #fff;
+    padding: 20px;
+    border: 1px solid #ddd;
     border-radius: 8px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    padding: 1em;
-    margin: 0.5em 0;
-  }
-  
-  #chart {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 200px;
-  }
-  
+}
+
+/* Weitere Anpassungen für moderne UI-Elemente */
+input, button, select {
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    padding: 8px 15px;
+    font-size: 16px;
+    margin-top: 10px;
+}
+
+button {
+    background-color: #007bff;
+    color: white;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
